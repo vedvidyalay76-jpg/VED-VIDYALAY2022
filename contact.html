@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — श्री महादेव शुभकरण त्रिवेणी वेद संस्थान</title>
+  <meta name="description" content="Get in touch with श्री महादेव शुभकरण त्रिवेणी वेद संस्थान for admissions, enquiries, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --muted:#9aa4b2;
+      --accent:#e6b800;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071021,#0b1624);color:#e6eef7}
+    .container{max-width:1100px;margin:0 auto;padding:36px}
+    header{text-align:center;padding:48px 0 30px}
+    .crest{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#f8d88c);display:flex;align-items:center;justify-content:center;font-family:Martel,serif;font-weight:700;font-size:28px;color:#092228;margin:0 auto 12px;box-shadow:0 8px 25px rgba(0,0,0,0.5)}
+    h1{font-family:Martel,serif;font-size:34px;margin:0 0 10px}
+    p.lead{color:var(--muted);font-size:16px;margin:0 0 20px}
+    .btn{padding:12px 20px;border-radius:12px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--muted)}
+    section{margin-top:42px}
+    h2{font-family:Martel,serif;font-size:26px;margin-bottom:18px;text-align:center}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,0.04);padding:20px;border-radius:14px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+    .card h3{margin:0 0 10px}
+    .card p{margin:0;color:var(--muted)}
+    iframe{width:100%;height:250px;border:0;border-radius:12px;margin-top:12px}
+    form{max-width:600px;margin:0 auto;padding:28px;background:rgba(255,255,255,0.03);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+    form input,form textarea{width:100%;margin-bottom:14px;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:15px}
+    form input::placeholder,form textarea::placeholder{color:var(--muted)}
+    footer{margin-top:44px;padding:20px;text-align:center;color:var(--muted)}
+    .fade-in{opacity:0;transform:translateY(12px);transition:all .7s ease-out}
+    .in-view{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="crest">श्री</div>
+      <h1>Contact Us</h1>
+      <p class="lead">We’re here to help with your queries and admissions</p>
+      <a href="index.html" class="btn btn-ghost">⬅ Back Home</a>
+    </header>
+
+    <section>
+      <h2>Our Contact Information</h2>
+      <div class="info-grid fade-in">
+        <div class="card">
+          <h3>📞 Phone</h3>
+          <p>+91 7307997688</p>
+        </div>
+        <div class="card">
+          <h3>📧 Email</h3>
+          <p>vedvidyalay76@gmail.com</p>
+        </div>
+        <div class="card">
+          <h3>🕒 Office Hours</h3>
+          <p>Mon–Sat: 9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Find Us</h2>
+      <iframe class="fade-in" src="https://www.google.com/maps/embed/v1/place?q=Singarpur,+Lakhisarai,+Bihar,+India&key=AIzaSyD"></iframe>
+    </section>
+
+    <section>
+      <h2>Send Us a Message</h2>
+      <form action="https://formspree.io/f/mjkbddpo" method="POST" class="fade-in">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn" style="background:linear-gradient(90deg,var(--accent),#ffd468);color:#07202a">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      © श्री महादेव शुभकरण त्रिवेणी वेद संस्थान — Contact Us
+    <br><small style="font-size:12px;color:#6f7987">Made by Amlendu Jha</small>
+  </footer>
+  </div>
+
+  <script>
+    const io=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){e.target.classList.add('in-view')}}},{threshold:0.12});
+    document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
