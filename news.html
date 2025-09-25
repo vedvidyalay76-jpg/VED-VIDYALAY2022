@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>News — श्री महादेव शुभकरण त्रिवेणी वेद संस्थान</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071021,#0b1624);color:#e6eef7;scroll-behavior:smooth}
+    header{text-align:center;padding:40px;background:linear-gradient(90deg,#0f1724,#1a2440)}
+    header h1{margin:0;font-family:Martel,serif;font-size:34px;color:#e6b800}
+    #typed{font-size:20px;color:#ffd468;font-style:italic;margin-top:10px;display:block}
+    section{padding:50px 20px;max-width:900px;margin:auto;text-align:center}
+    .news-grid{display:grid;grid-template-columns:1fr;gap:20px}
+    .news-card{background:rgba(255,255,255,0.05);padding:20px;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,0.5);transition:transform .3s, box-shadow .3s;text-align:left}
+    .news-card:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(0,0,0,0.6)}
+    .news-date{font-size:13px;color:#9aa4b2;margin-bottom:6px}
+    .news-card h3{margin:0 0 10px;color:#ffd468;font-size:20px}
+    .news-card p{margin:0;color:#cfd4da}
+    a.btn{display:inline-block;margin-top:20px;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;background:linear-gradient(90deg,#e6b800,#ffd468);color:#07202a;transition:transform .3s}
+    a.btn:hover{transform:scale(1.05)}
+    footer{padding:20px;text-align:center;color:#9aa4b2;font-size:14px;margin-top:40px}
+    footer small{display:block;margin-top:6px;font-size:12px;color:#6f7987}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📰 समाचार एवं घोषणाएँ</h1>
+    <span id="typed"></span>
+    <a href="index.html" class="btn">⬅ Back to Home</a>
+  </header>
+
+  <section>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">📅 01 Sept 2025</div>
+        <h3>Admission is closed till 2026</h3>
+        <p>अगले शैक्षणिक सत्र तक प्रवेश बंद हैं। कृपया अद्यतन जानकारी के लिए हमारी वेबसाइट देखते रहें।</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">📅 14 Sept 2025</div>
+        <h3>हिंदी दिवस में बच्चों का अद्भुत प्रदर्शन</h3>
+        <p>विद्यार्थियों ने कविता पाठ, निबंध लेखन और भाषण प्रतियोगिता में अद्वितीय प्रतिभा दिखाई।</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">📅 20 Aug 2025</div>
+        <h3>अशोकधाम महोत्सव में बच्चों ने जीते पुरस्कार</h3>
+        <p>विद्यालय के विद्यार्थियों ने उत्कृष्ट प्रदर्शन करते हुए अनेक पुरस्कार प्राप्त किए।</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © श्री महादेव शुभकरण त्रिवेणी वेद संस्थान
+    <small>Made by Amlendu Jha</small>
+  </footer>
+
+  <script>
+    // Typing animation for Sanskrit header line
+    const phrases = ["विद्या ददाति विनयं", "सत्यमेव जयते", "धर्मो रक्षति रक्षितः"];
+    let i=0, ci=0, forward=true;
+    const typed = document.getElementById('typed');
+    function typeTick(){
+      let txt = phrases[i];
+      if(forward){
+        ci++;
+        typed.textContent = txt.slice(0,ci);
+        if(ci===txt.length){forward=false;setTimeout(typeTick,1500);return;}
+      } else {
+        ci--;
+        typed.textContent = txt.slice(0,ci);
+        if(ci===0){forward=true;i=(i+1)%phrases.length;}
+      }
+      setTimeout(typeTick,100);
+    }
+    typeTick();
+  </script>
+</body>
+</html>
