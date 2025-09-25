@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — श्री महादेव शुभकरण त्रिवेणी वेद संस्थान</title>
+  <meta name="description" content="श्री महादेव शुभकरण त्रिवेणी वेद संस्थान — Gurukula inspired holistic education. Sanskrit | English | Regional language" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#ffffff;
+      --muted:#9aa4b2;
+      --accent:#e6b800;
+      --glass: rgba(255,255,255,0.06);
+      color-scheme: light dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071021 0%, #0b1624 70%);color:#e6eef7}
+    .container{max-width:1100px;margin:0 auto;padding:36px}
+    header{position:relative;padding:48px 0 36px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .crest{width:68px;height:68px;background:linear-gradient(135deg,var(--accent),#f8d88c);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#092228;font-weight:700;font-family:Martel,serif;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+    .brand h1{font-family:Martel,serif;margin:0;font-size:18px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    .nav-links{display:flex;gap:18px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;margin-top:28px}
+    .hero-left{padding:24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:600;font-size:13px}
+    h2{font-size:34px;line-height:1.04;margin:14px 0 6px;font-family:Martel,serif}
+    .typing{color:var(--accent)}
+    p.lead{color:var(--muted);margin:12px 0 18px}
+    .cta-row{display:flex;gap:14px}
+    .btn{padding:12px 18px;border-radius:12px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ffd468);color:#07202a}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .hero-card{padding:22px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:inset 0 1px 0 rgba(255,255,255,0.02), 0 20px 40px rgba(2,6,23,0.7)}
+    .stat{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+    .stat .num{font-size:28px;font-weight:700;color:var(--accent)}
+    .stat .label{color:var(--muted);font-size:13px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .timeline{margin-top:28px;padding:18px;border-radius:12px;background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(255,255,255,0.01))}
+    .timeline-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+    .timeline-item:last-child{border-bottom:0}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
+    footer{margin-top:44px;padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.08), rgba(255,255,255,0.01));display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    footer small{color:var(--muted)}
+    .fade-in{opacity:0;transform:translateY(8px);transition:all .7s cubic-bezier(.2,.9,.3,1)}
+    .in-view{opacity:1;transform:none}
+    .wave{position:absolute;right:0;bottom:-30px;width:60%;opacity:0.12}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid-3{grid-template-columns:1fr}
+      .hero-card{order:2}
+      .wave{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="crest">श्री</div>
+          <div>
+            <h1>श्री महादेव शुभकरण त्रिवेणी वेद संस्थान</h1>
+            <p>Gurukula • संस्कृत • समग्र विकास</p>
+          </div>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#values">Values</a>
+          <a href="#vision">Vision</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <section class="hero-left">
+          <span class="eyebrow">Established: 19XX</span>
+          <h2 class="fade-in" id="headline">हमारा उद्देश्य — <span class="typing" id="typed">परंपरा से आधुनिकता तक</span></h2>
+          <p class="lead fade-in">शिक्षा जो जीवन को आकार दे — आध्यात्मिकता, विद्या और चरित्र एक साथ। हमारे विद्यार्थी तीन भाषाओं में प्रवीण होते हैं: संस्कृत, अंग्रेजी और क्षेत्रीय भाषा।</p>
+          <div class="cta-row fade-in">
+            <button class="btn btn-primary" onclick="scrollToSection('#contact')">Admission Enquiry</button>
+            <button class="btn btn-ghost" onclick="scrollToSection('#vision')">Read our Vision</button>
+            <a href="index.html" class="btn btn-ghost">⬅ Back Home</a>
+          </div>
+        </section>
+
+        <aside class="hero-card fade-in">
+          <div class="stat"><div class="num">120+</div><div><div class="label">Current Students</div></div></div>
+          <div class="stat"><div class="num">25</div><div><div class="label">Faculty Members</div></div></div>
+          <div class="stat"><div class="num">3</div><div><div class="label">Mediums of Instruction</div></div></div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Our daily routine blends chanting, classes, physical training and creative time. Every month features a community seva & cultural program.</div>
+        </aside>
+      </div>
+
+      <div class="timeline fade-in" id="about">
+        <h3>Our Journey</h3>
+        <div class="timeline-item"><div class="dot"></div><div><strong>Foundation</strong><div style="color:var(--muted);font-size:13px">Started as a small pathshala.</div></div></div>
+        <div class="timeline-item"><div class="dot"></div><div><strong>Expansion</strong><div style="color:var(--muted);font-size:13px">Introduced modern subjects.</div></div></div>
+        <div class="timeline-item"><div class="dot"></div><div><strong>Today</strong><div style="color:var(--muted);font-size:13px">A thriving institute.</div></div></div>
+      </div>
+
+      <section id="values" class="fade-in"><h3>Core Values</h3></section>
+      <section id="vision" class="fade-in"><h3>Vision</h3><p style="color:var(--muted)">To weave timeless Vedic wisdom into 21st-century learning.</p></section>
+      <section id="contact"><h3>Contact & Admissions</h3></section>
+
+      <footer>
+        <small>© श्री महादेव शुभकरण त्रिवेणी वेद संस्थान • All rights reserved</small>
+        <a href="index.html" class="btn btn-ghost">⬅ Back Home</a>
+      <br><small style="font-size:12px;color:#6f7987">Made by Amlendu Jha</small>
+  </footer>
+    </header>
+  </div>
+  <script>
+    function scrollToSection(sel){document.querySelector(sel).scrollIntoView({behavior:'smooth',block:'center'})}
+    const typedEl=document.getElementById('typed');
+    const phrases=['परंपरा से आधुनिकता तक','Sanskrit • Discipline • Excellence','Charitra • Vidya • Seva'];
+    let pi=0,ci=0,forward=true;
+    function tick(){const txt=phrases[pi];if(forward){ci++;typedEl.textContent=txt.slice(0,ci);if(ci===txt.length){forward=false;setTimeout(tick,1400);return}}else{ci--;typedEl.textContent=txt.slice(0,ci);if(ci===0){forward=true;pi=(pi+1)%phrases.length}}setTimeout(tick,80);}tick();
+    const io=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){e.target.classList.add('in-view')}}},{threshold:0.12});
+    document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.fade-in').forEach(el=>el.style.transition='none');}
+  </script>
+</body>
+</html>
