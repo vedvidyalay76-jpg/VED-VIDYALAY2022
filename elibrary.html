@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Library | SMSTVS</title>
+  <style>
+    body {
+      font-family: "Noto Serif Devanagari", serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      text-align: center;
+      padding: 20px;
+    }
+    #preloader img {
+      width: 120px;
+      animation: spinpulse 2s infinite;
+    }
+    @keyframes spinpulse {
+      0%   { transform: rotate(0deg) scale(1); opacity: 1; }
+      25%  { transform: rotate(90deg) scale(1.1); opacity: 0.9; }
+      50%  { transform: rotate(180deg) scale(1); opacity: 0.8; }
+      75%  { transform: rotate(270deg) scale(1.1); opacity: 0.9; }
+      100% { transform: rotate(360deg) scale(1); opacity: 1; }
+    }
+    #quote {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #4b2e83;
+      font-weight: bold;
+      max-width: 80%;
+      animation: fadeQuote 3s infinite alternate;
+    }
+    @keyframes fadeQuote {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+    #quote small {
+      display: block;
+      margin-top: 5px;
+      font-size: 15px;
+      color: #555;
+      font-style: italic;
+    }
+    #preloader p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    #content {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .library {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .book {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .book h3 {
+      margin-bottom: 15px;
+      color: #34495e;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      background: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="logo.png" alt="Loading...">
+    <div id="quote">Loading Sanskrit wisdom...</div>
+    <p>Loading E-Library...</p>
+  </div>
+
+  <!-- Content -->
+  <div id="content">
+    <h1>📚 E-Library - श्री महादेव शुभकरण त्रिवेणी वेद संस्थान</h1>
+
+    <div class="library">
+      <div class="book">
+        <h3>Valmiki Ramayana - Bal Kanda (Vol 01)</h3>
+        <a class="btn" href="books/Vol01-BalKanda_SMSTVS.pdf" target="_blank">📖 Read Online</a>
+        <a class="btn" href="books/Vol01-BalKanda_SMSTVS.pdf" download>⬇ Download</a>
+      </div>
+
+      <div class="book">
+        <h3>Bhaimi Vyakhya - Part 1 (Bhim Sen Shastri)</h3>
+        <a class="btn" href="books/Bhaimi_Vyakhya_Part _1 - Bhim Sen SHASTRI_SMSTVS.pdf" target="_blank">📖 Read Online</a>
+        <a class="btn" href="books/Bhaimi_Vyakhya_Part _1 - Bhim Sen SHASTRI_SMSTVS.pdf" download>⬇ Download</a>
+      </div>
+
+      <div class="book">
+        <h3>Bhaimi Vyakhya - Part 2 (Bhim Sen Shastri)</h3>
+        <a class="btn" href="books/Bhaimi_Vyakhya_Part 2 - Bhim Sen SHASTRI_SMSTVS.pdf" target="_blank">📖 Read Online</a>
+        <a class="btn" href="books/Bhaimi_Vyakhya_Part 2 - Bhim Sen SHASTRI_SMSTVS.pdf" download>⬇ Download</a>
+      </div>
+
+      <div class="book">
+        <h3>Sanskrit - Hindi Dictionary</h3>
+        <a class="btn" href="books/SANSKRITHINDIDICTIONARY_SMSTVS.pdf" target="_blank">📖 Read Online</a>
+        <a class="btn" href="books/SANSKRITHINDIDICTIONARY_SMSTVS.pdf" download>⬇ Download</a>
+      </div>
+
+      <div class="book">
+        <h3>Rashmirathi</h3>
+        <a class="btn" href="books/RASHMIRATHI_SMSTVS.pdf" target="_blank">📖 Read Online</a>
+        <a class="btn" href="books/RASHMIRATHI_SMSTVS.pdf" download>⬇ Download</a>
+      </div>
+
+      <div class="book">
+        <h3>Sambhāṣaṇam</h3>
+        <a class="btn" href="books/SAMBHASANAM_SMSTVS.pdf" target="_blank">📖 Read Online</a>
+        <a class="btn" href="books/SAMBHASANAM_SMSTVS.pdf" download>⬇ Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Quotes with Hindi translations
+    const quotes = [
+      {
+        en: "“Sanskrit is the greatest treasure given to the world.” – Max Müller",
+        hi: "“संस्कृत विश्व को दिया गया सबसे महान खजाना है।” – मैक्स मूलर"
+      },
+      {
+        en: "“Sanskrit is the mother of all Indo-European languages.” – Sir William Jones",
+        hi: "“संस्कृत सभी हिन्द-यूरोपीय भाषाओं की जननी है।” – सर विलियम जोन्स"
+      },
+      {
+        en: "“If I was asked what is the greatest treasure India possesses, I would say – the Sanskrit language.” – Friedrich Schlegel",
+        hi: "“यदि मुझसे पूछा जाए कि भारत का सबसे बड़ा खजाना क्या है, तो मैं कहूँगा – संस्कृत भाषा।” – फ्रेडरिक श्लेगेल"
+      },
+      {
+        en: "“Without Sanskrit, no spiritual knowledge can spread in the world.” – Swami Vivekananda",
+        hi: "“संस्कृत के बिना विश्व में कोई आध्यात्मिक ज्ञान नहीं फैल सकता।” – स्वामी विवेकानंद"
+      },
+      {
+        en: "“The Sanskrit language, as no other, has power to broaden the intellect.” – Sri Aurobindo",
+        hi: "“संस्कृत भाषा जैसी और कोई नहीं, जिसमें बुद्धि को विस्तृत करने की शक्ति है।” – श्री अरविन्द"
+      }
+    ];
+
+    let index = 0;
+    setInterval(() => {
+      document.getElementById("quote").innerHTML =
+        quotes[index].en + "<br><small>" + quotes[index].hi + "</small>";
+      index = (index + 1) % quotes.length;
+    }, 4000);
+
+    // Preloader fade out
+    window.addEventListener("load", function() {
+      const preloader = document.getElementById("preloader");
+      const content = document.getElementById("content");
+
+      preloader.style.transition = "opacity 0.8s ease";
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+        content.style.display = "block";
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>
