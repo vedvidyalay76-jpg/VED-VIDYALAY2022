@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Library</title>
+  <style>
+    body {
+      font-family: "Noto Sans Devanagari", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      text-align: center;
+    }
+    /* Loader */
+    #loader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+    #loader img {
+      width: 120px;
+      animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #content {
+      display: none;
+      padding: 20px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    .quote {
+      font-style: italic;
+      margin: 15px 0;
+      font-size: 18px;
+      color: #555;
+    }
+    .drive-link {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+    .drive-link:hover {
+      background: #388E3C;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <img src="logo.png" alt="Loading Logo">
+  <p>📚 संस्कृतम् जगतः शोभा अस्ति 📚</p>
+</div>
+
+<div id="content">
+  <h1>ई-लाइब्रेरी</h1>
+  <p class="quote">"संस्कृतं नाम दैवी वाक्"</p>
+  <p class="quote">"यत्र संस्कृतं तत्र संस्कृति:"</p>
+
+  <p>नीचे दिए गए लिंक पर क्लिक करके आप सभी पुस्तकों को Google Drive से देख और डाउनलोड कर सकते हैं।</p>
+
+  <a href="https://drive.google.com/drive/folders/1j38QT_siMMyBebMR-O2TZfjmRgn2SpWd" 
+     target="_blank" 
+     class="drive-link">📚 सभी पुस्तकें देखें</a>
+</div>
+
+<script>
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 2500);
+  }
+</script>
+
+</body>
+</html>
