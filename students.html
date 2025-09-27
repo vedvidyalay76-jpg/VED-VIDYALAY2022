@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Students Corner - Login</title>
+  <style>
+    body {background:#0f1724;color:#e6eef7;font-family:Arial, sans-serif;text-align:center;padding:40px;}
+    input[type="password"] {padding:12px;border-radius:8px;border:1px solid #ccc;width:220px;font-size:16px;}
+    button {padding:12px 20px;margin-left:10px;background:#e6b800;color:#07202a;border:none;border-radius:8px;font-weight:600;cursor:pointer;}
+    .class-btn{display:block;width:220px;margin:12px auto;padding:14px;background:#2196F3;color:white;border-radius:10px;text-decoration:none;font-size:18px;}
+    footer{padding:20px;text-align:center;color:#9aa4b2;font-size:14px}footer small{display:block;margin-top:6px;font-size:12px;color:#6f7987}
+  </style>
+</head>
+<body>
+  <h1>🔒 Students Corner</h1>
+  <div id="loginBox">
+    <p>Enter password to access class resources</p>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error" style="color:#ff9ea8;"></p>
+  </div>
+
+  <div id="content" style="display:none;">
+    <h2>Choose Your Class</h2>
+    <a href="class6.html" class="class-btn">Class 6</a>
+    <a href="class7.html" class="class-btn">Class 7</a>
+    <a href="class8.html" class="class-btn">Class 8</a>
+    <a href="class9.html" class="class-btn">Class 9</a>
+    <a href="class10.html" class="class-btn">Class 10</a>
+    <a href="class11.html" class="class-btn">Class 11</a>
+    <a href="class12.html" class="class-btn">Class 12</a>
+  </div>
+
+  <footer>
+    © श्री महादेव शुभकरण त्रिवेणी वेद संस्थान
+    <small>Holder – Amlendu Jha</small>
+  </footer>
+
+<script>
+function checkPassword() {
+  var pwd = document.getElementById("password").value;
+  if(pwd === "ved_is_great") {
+    sessionStorage.setItem("role","student");
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  } else {
+    document.getElementById("error").innerText = "❌ Wrong password";
+  }
+}
+if(sessionStorage.getItem("role")) {
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("content").style.display = "block";
+}
+</script>
+</body>
+</html>
